@@ -62,7 +62,7 @@ if(isset($_POST['idm']) && !empty($_POST['idm'])){
 <?php
 			
 			//conexion
-			$conn = new SQLite3('C:/SFS_v1.3.2/bd/BDFacturador.db');
+			$conn = new SQLite3('D:/e_fac/bd/BDFacturador.db');
 
 			if($conn){
 				$q="SELECT * FROM DOCUMENTO";//WHERE FEC_CARG='$fecv'
@@ -118,8 +118,8 @@ if(isset($_POST['idm']) && !empty($_POST['idm'])){
 
 					if($ind_situ=='03' || $ind_situ=='04' || $ind_situ=='11' || $ind_situ=='12'){
 
-						$origen='C:/SFS_v1.3.2/sunat_archivos/sfs/DATA/'.$nom_arch;
-						$destino='C:/SFS_v1.3.2/sunat_archivos/sfs/DATA/archivados/'.$nom_arch;
+						$origen='D:/e_fac/sunat_archivos/sfs/DATA/'.$nom_arch;
+						$destino='D:/e_fac/sunat_archivos/sfs/DATA/archivados/'.$nom_arch;
 
 						if(file_exists($origen.".cab")){
 							rename($origen.".cab",$destino.".cab");
