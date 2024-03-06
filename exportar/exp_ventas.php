@@ -124,7 +124,11 @@ if(isset($clientep) && !empty($clientep) && isset($iniped) && !empty($iniped) &&
                             $dd='=TEXTO(0;"00000000")';
                             $ntd=$rcp['tipodocumento'];
                             $ndd="999999999";
-                            $nnom="BOLETA DE VENTA";
+                            if(is_null($rcp['s_tipcom'])){
+                              $nnom="TICKET DE VENTA";
+                            }else{
+                              $nnom="BOLETA DE VENTA";
+                            }
                           }else{
                             $dd=$rcp['numerodoc'];
                             $ntd=$rcp['tipodocumento'];
